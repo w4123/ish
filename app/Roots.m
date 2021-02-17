@@ -15,7 +15,7 @@ static NSURL *RootsDir() {
     static NSURL *rootsDir;
     static dispatch_once_t token;
     dispatch_once(&token, ^{
-        rootsDir = [Bundle.main.resourceURL URLByAppendingPathComponent:@"roots"];
+        rootsDir = [[[NSBundle mainBundle] resourceURL] URLByAppendingPathComponent:@"roots"];
         NSFileManager *manager = [NSFileManager defaultManager];
         [manager createDirectoryAtURL:rootsDir
           withIntermediateDirectories:YES
