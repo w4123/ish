@@ -15,7 +15,7 @@ if os.environ['ENABLE_ON_DEMAND_RESOURCES'] == 'YES':
 
 def main():
     if os.environ['ENABLE_APK_ODRS'] != 'YES':
-        (resources_dir/'OnDemandResources.plist').unlink(missing_ok=True)
+        (resources_dir/'OnDemandResources.plist').unlink()
         return
 
     root = pathlib.Path(os.environ['SRCROOT'])/'deps'/'aports'
