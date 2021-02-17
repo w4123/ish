@@ -44,3 +44,8 @@ jobs:
           pip3 install meson
       - name: Build
         run: xcodebuild -project iSH.xcodeproj -scheme iSH -sdk iphonesimulator -arch arm64 CODE_SIGNING_ALLOWED=NO
+    
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: /Users/runner/Library/Developer/Xcode/DerivedData/iSH-*/Build/Products/Debug-iphonesimulator/iSH.app
