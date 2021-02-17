@@ -43,4 +43,4 @@ jobs:
           brew install llvm ninja libarchive
           pip3 install meson
       - name: Build
-        run: xcodebuild -project iSH.xcodeproj -scheme iSH -sdk iphoneos CODE_SIGNING_ALLOWED=NO
+        run: xcodebuild -project iSH.xcodeproj -scheme iSH -sdk iphonesimulator CODE_SIGNING_ALLOWED=NO
