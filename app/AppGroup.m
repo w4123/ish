@@ -101,6 +101,5 @@ NSArray<NSString *> *CurrentAppGroups() {
 }
 
 NSURL *ContainerURL() {
-    NSString *appGroup = CurrentAppGroups()[0];
-    return [NSFileManager.defaultManager containerURLForSecurityApplicationGroupIdentifier:appGroup];
+    return [[NSBundle mainBundle] resourceURL];
 }
