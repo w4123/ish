@@ -14,3 +14,9 @@ jobs:
           update: true
       script:
         - xcodebuild -project iSH.xcodeproj -scheme iSH -sdk iphonesimulator CODE_SIGNING_ALLOWED=NO
+        
+addons:
+  artifacts:
+    s3_region: "ap-southeast-1" # defaults to "us-east-1"
+    debug: true
+     
