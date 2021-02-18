@@ -43,7 +43,7 @@ jobs:
           brew install llvm ninja libarchive
           pip3 install meson
       - name: Build
-        run: xcodebuild -project iSH.xcodeproj -scheme iSH -sdk iphonesimulator -arch arm64 CODE_SIGNING_ALLOWED=NO ISH_LOG="strace instr verbose"
+        run: xcodebuild -project iSH.xcodeproj -scheme iSH -sdk iphonesimulator -arch arm64 CODE_SIGNING_ALLOWED=NO ISH_LOG="strace verbose"
     
       - uses: actions/upload-artifact@v2
         with:
