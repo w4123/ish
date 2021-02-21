@@ -43,7 +43,7 @@ jobs:
           brew install llvm ninja libarchive
           pip3 install meson
       - name: Build
-        run: xcodebuild -project iSH.xcodeproj -scheme iSH -sdk iphonesimulator -arch arm64 CODE_SIGNING_ALLOWED=NO
+        run: xcodebuild -project iSH.xcodeproj -scheme iSH -configuration Release -sdk iphonesimulator -arch arm64 CODE_SIGNING_ALLOWED=NO
     
       - uses: actions/upload-artifact@v2
         with:
