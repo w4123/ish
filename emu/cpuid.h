@@ -18,8 +18,10 @@ static inline void do_cpuid(dword_t *eax, dword_t *ebx, dword_t *ecx, dword_t *e
             *ebx = 0x0; // processor number 0, flushes 0 bytes on clflush
             *ecx = 0; // we support none of the features in ecx
             *edx = (1 << 0) // fpu
+                | (1 << 4)  // tsc
                 | (1 << 15) // cmov
                 | (1 << 23) // mmx
+                | (1 << 25) // sse
                 | (1 << 26) // sse2
                 ;
             break;
