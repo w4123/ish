@@ -14,7 +14,7 @@ static inline void do_cpuid(dword_t *eax, dword_t *ebx, dword_t *ecx, dword_t *e
             break;
         default: // if leaf is too high, use highest supported leaf
         case 1:
-            *eax = 0x0; // say nothing about cpu model number
+            *eax = 0b00000000000000000000010100000000; // say nothing about cpu model number
             *ebx = 0x0; // processor number 0, flushes 0 bytes on clflush
             *ecx = 0; // we support none of the features in ecx
             *edx = (1 << 0) // fpu
